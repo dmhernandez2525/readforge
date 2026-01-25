@@ -92,6 +92,68 @@ export default function App() {
         </div>
       </section>
 
+      {/* Coming Soon Section */}
+      <section className="container mx-auto px-4 py-16 bg-gradient-to-r from-purple-900/20 to-indigo-900/20 rounded-3xl my-8">
+        <div className="text-center mb-8">
+          <span className="bg-purple-500/20 text-purple-300 px-4 py-1 rounded-full text-sm font-medium">
+            Coming Soon
+          </span>
+          <h2 className="text-3xl font-bold mt-4 mb-2">Interactive Reading Mode</h2>
+          <p className="text-slate-400 max-w-2xl mx-auto">
+            Control your reading with natural voice commands. Powered by PersonaPlex full duplex AI.
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          <div className="bg-slate-800/50 p-6 rounded-xl">
+            <h3 className="text-lg font-semibold mb-4 text-slate-400">Current Experience</h3>
+            <div className="space-y-2 text-sm text-slate-500">
+              <p>Click play button to start</p>
+              <p>Click pause to stop</p>
+              <p>Manually scroll to find your place</p>
+              <p>Click again to resume</p>
+            </div>
+          </div>
+
+          <div className="bg-purple-900/30 p-6 rounded-xl border border-purple-500/30">
+            <h3 className="text-lg font-semibold mb-4 text-purple-300">With PersonaPlex</h3>
+            <div className="space-y-3 text-sm">
+              <div className="bg-slate-900/50 p-2 rounded">
+                <span className="text-slate-400">You:</span> "Start reading"
+              </div>
+              <div className="bg-purple-900/50 p-2 rounded">
+                <span className="text-purple-400">ReadForge:</span> "Starting from chapter 3..."
+              </div>
+              <div className="bg-slate-900/50 p-2 rounded">
+                <span className="text-slate-400">You:</span> "Wait, what does that word mean?"
+              </div>
+              <div className="bg-purple-900/50 p-2 rounded">
+                <span className="text-purple-400">ReadForge:</span> "It refers to..." <span className="text-purple-400/60">[explains, then resumes]</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8 max-w-3xl mx-auto text-center">
+          <div className="p-3">
+            <p className="text-2xl font-bold text-purple-400">&lt;500ms</p>
+            <p className="text-xs text-slate-400">Response Time</p>
+          </div>
+          <div className="p-3">
+            <p className="text-2xl font-bold text-purple-400">Full Duplex</p>
+            <p className="text-xs text-slate-400">Natural Interruption</p>
+          </div>
+          <div className="p-3">
+            <p className="text-2xl font-bold text-purple-400">100%</p>
+            <p className="text-xs text-slate-400">Local Processing</p>
+          </div>
+          <div className="p-3">
+            <p className="text-2xl font-bold text-purple-400">Hands-Free</p>
+            <p className="text-xs text-slate-400">Voice Control</p>
+          </div>
+        </div>
+      </section>
+
       {/* Pricing Section */}
       <section id="pricing" className="container mx-auto px-4 py-16">
         <h2 className="text-3xl font-bold text-center mb-12">Simple Pricing</h2>

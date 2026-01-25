@@ -287,7 +287,47 @@ Features are organized by phase and priority. Each feature includes effort estim
 | VOC-003 | Voice mixing (blend voices) | P3 | L | CLN-001 | Backlog |
 | VOC-004 | Background music/ambient | P3 | M | TTS-002 | Backlog |
 
+---
+
+## Phase 5: Interactive Reading (PersonaPlex)
+
+### PersonaPlex Integration
+
+| ID | Feature | Priority | Effort | Dependencies | Status |
+|----|---------|----------|--------|--------------|--------|
+| PPX-001 | PersonaPlex server deployment | P1 | M | None | Backlog |
+| PPX-002 | Audio stream bi-directional | P1 | L | PPX-001 | Backlog |
+| PPX-003 | Full duplex audio handling | P0 | L | PPX-002 | Backlog |
+| PPX-004 | Back-channeling support | P1 | M | PPX-003 | Backlog |
+| PPX-005 | Natural interruption handling | P0 | M | PPX-003 | Backlog |
+| PPX-006 | macOS desktop integration | P1 | M | PPX-002, MAC-* | Backlog |
+| PPX-007 | Browser extension integration | P2 | L | PPX-002, CHR-* | Backlog |
+
+### Voice Navigation Commands
+
+| ID | Feature | Priority | Effort | Dependencies | Status |
+|----|---------|----------|--------|--------------|--------|
+| VNC-001 | "Start reading" / "Stop" | P0 | S | PPX-002 | Backlog |
+| VNC-002 | "Go back" / "Repeat that" | P0 | M | VNC-001 | Backlog |
+| VNC-003 | "Skip ahead" / "Next section" | P0 | M | VNC-001 | Backlog |
+| VNC-004 | "Slow down" / "Faster" | P1 | S | VNC-001, TTS-003 | Backlog |
+| VNC-005 | "Where am I?" | P1 | S | VNC-001 | Backlog |
+| VNC-006 | "Bookmark this" | P2 | S | VNC-001 | Backlog |
+| VNC-007 | "Go to bookmark [name]" | P2 | M | VNC-006 | Backlog |
+
+### Content Understanding
+
+| ID | Feature | Priority | Effort | Dependencies | Status |
+|----|---------|----------|--------|--------------|--------|
+| CUN-001 | "What does [word] mean?" | P1 | M | PPX-002 | Backlog |
+| CUN-002 | "Explain that" (concept) | P2 | L | CUN-001 | Backlog |
+| CUN-003 | "Summarize this section" | P2 | L | CUN-001 | Backlog |
+| CUN-004 | "What was that about?" | P2 | M | CUN-001 | Backlog |
+| CUN-005 | Context-aware Q&A | P3 | XL | CUN-001 | Backlog |
+
 ### Accessibility
+
+
 
 | ID | Feature | Priority | Effort | Dependencies | Status |
 |----|---------|----------|--------|--------------|--------|

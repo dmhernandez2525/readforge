@@ -263,7 +263,129 @@ ReadForge is a cross-platform, privacy-first text-to-speech application that run
 
 ---
 
-## Post-Launch Roadmap (2026 Q3+)
+## Phase 5: Interactive Reading - PersonaPlex Integration (Q3 2026)
+
+**Goal:** Voice-controlled reading with natural conversation
+**Target:** Hands-free users, accessibility, multi-tasking readers
+
+### Overview
+
+Integrate NVIDIA's PersonaPlex full duplex AI to enable natural, conversational control of the reading experience. Users can interrupt, ask questions, and navigate documents using only their voice.
+
+### What is PersonaPlex?
+
+PersonaPlex is NVIDIA's open-source **full duplex** conversational AI:
+- **Full Duplex**: Listens and speaks simultaneously
+- **Back-channeling**: Says "uh-huh", "got it" while you speak
+- **Near-zero latency**: <500ms response time
+- **Open source**: Apache 2.0 license
+
+### Feature: Interactive Reading Mode
+
+**Current Experience:**
+```
+User presses play → Audio plays → User clicks pause → User scrolls → User clicks play
+```
+
+**With PersonaPlex:**
+```
+User: "Start reading"
+ReadForge: "Starting from chapter 3..." [begins reading]
+User: "Wait, go back"
+ReadForge: "Sure, from where?" [stops, waits]
+User: "The part about machine learning"
+ReadForge: "Found it. 'Machine learning is a subset of...'" [continues]
+User: "What does that mean?"
+ReadForge: "Machine learning refers to..." [explains, then resumes]
+User: "Skip to the next section"
+ReadForge: "Jumping to 'Neural Networks'..." [continues reading]
+```
+
+### Phase 5A: PersonaPlex Integration (Weeks 49-52)
+
+| ID | Feature | Priority | Effort | Dependencies |
+|----|---------|----------|--------|--------------|
+| 5A.1 | PersonaPlex server deployment | P1 | M | None |
+| 5A.2 | Audio stream integration | P1 | L | 5A.1 |
+| 5A.3 | Navigation commands | P1 | M | 5A.2 |
+| 5A.4 | Content explanation mode | P2 | L | 5A.2 |
+| 5A.5 | macOS desktop integration | P1 | M | 5A.2, MAC-* |
+| 5A.6 | Browser extension integration | P2 | L | 5A.2, CHR-* |
+
+### Phase 5B: Advanced Voice Features (Weeks 53-56)
+
+| ID | Feature | Priority | Effort | Dependencies |
+|----|---------|----------|--------|--------------|
+| 5B.1 | "What was that?" replay | P1 | S | 5A.3 |
+| 5B.2 | "Define [word]" inline | P1 | M | 5A.4 |
+| 5B.3 | "Summarize this section" | P2 | M | 5A.4 |
+| 5B.4 | "Slow down" / "Speed up" voice control | P1 | S | 5A.3 |
+| 5B.5 | "Bookmark this" voice command | P2 | S | 5A.3 |
+| 5B.6 | Natural interruption handling | P0 | M | 5A.2 |
+
+### Supported Voice Commands
+
+| Command | Action |
+|---------|--------|
+| "Start reading" / "Read this" | Begin reading current document |
+| "Stop" / "Pause" | Pause reading |
+| "Go back" / "Repeat that" | Replay last sentence/paragraph |
+| "Skip ahead" / "Next section" | Jump forward |
+| "Slow down" / "Faster" | Adjust speed via voice |
+| "What does [word] mean?" | Inline definition |
+| "Explain that" | Pause and explain concept |
+| "Summarize this section" | Generate summary |
+| "Bookmark this" | Save current position |
+| "Where am I?" | Announce current position |
+
+### Technical Architecture
+
+```
+┌─────────────────────────────────────────────────────────────┐
+│                  ReadForge + PersonaPlex                     │
+├─────────────────────────────────────────────────────────────┤
+│                                                              │
+│  ┌──────────────────────────────────────────────────────┐   │
+│  │              PersonaPlex Server                       │   │
+│  │              (Port 8998, Full Duplex)                 │   │
+│  │                                                       │   │
+│  │  ┌─────────────┐       ┌─────────────────────────┐   │   │
+│  │  │   User      │◄─────►│   Reading Assistant     │   │   │
+│  │  │   Voice     │       │   (Navigation Agent)    │   │   │
+│  │  └─────────────┘       └─────────────────────────┘   │   │
+│  │                                 │                     │   │
+│  │                                 ▼                     │   │
+│  │  ┌──────────────────────────────────────────────────┐│   │
+│  │  │                 ReadForge Core                    ││   │
+│  │  │  ┌──────────┐  ┌──────────┐  ┌──────────┐       ││   │
+│  │  │  │ Document │  │ Kokoro   │  │ Position │       ││   │
+│  │  │  │ Parser   │  │ TTS      │  │ Manager  │       ││   │
+│  │  │  └──────────┘  └──────────┘  └──────────┘       ││   │
+│  │  └──────────────────────────────────────────────────┘│   │
+│  └──────────────────────────────────────────────────────┘   │
+│                                                              │
+└─────────────────────────────────────────────────────────────┘
+```
+
+### Hardware Requirements
+
+| Component | Minimum | Recommended |
+|-----------|---------|-------------|
+| VRAM | 24GB | 32GB+ |
+| RAM | 32GB | 64GB |
+| GPU | Apple M2 Pro / RTX 3090 | M2 Max / RTX 4090 |
+
+### Phase 5 Success Criteria
+
+- [ ] Voice commands recognized 95%+ accuracy
+- [ ] Natural interruption feels seamless
+- [ ] <500ms response to voice commands
+- [ ] Explanation mode generates helpful content
+- [ ] User satisfaction >4/5 for hands-free reading
+
+---
+
+## Post-Launch Roadmap (2026 Q4+)
 
 ### Future Features (Backlog)
 
