@@ -1,0 +1,5 @@
+# ONNX models directory
+# Models are not committed to git (too large)
+# Download models from HuggingFace:
+# - Kokoro-82M: https://huggingface.co/hexgrad/Kokoro-82M-ONNX
+# - Piper voices: https://github.com/rhasspy/piper

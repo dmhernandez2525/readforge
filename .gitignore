@@ -1,0 +1,117 @@
+# Dependencies
+node_modules/
+.pnp/
+.pnp.js
+
+# Build outputs
+dist/
+build/
+.output/
+*.js.map
+
+# Browser extension
+browser-extension/.output/
+browser-extension/dist/
+browser-extension/*.zip
+
+# macOS
+desktop-mac/DerivedData/
+desktop-mac/build/
+*.xcuserstate
+*.xcworkspace/xcuserdata/
+*.pbxuser
+*.mode1v3
+*.mode2v3
+*.perspectivev3
+xcuserdata/
+*.moved-aside
+*.hmap
+*.ipa
+*.dSYM.zip
+*.dSYM
+
+# Tauri
+desktop-cross/target/
+desktop-cross/src-tauri/target/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.Python
+env/
+venv/
+.venv/
+pip-log.txt
+pip-delete-this-directory.txt
+.tox/
+.coverage
+.coverage.*
+htmlcov/
+*.egg-info/
+.eggs/
+
+# iOS
+mobile-ios/DerivedData/
+mobile-ios/build/
+*.ipa
+
+# Android
+mobile-android/.gradle/
+mobile-android/build/
+mobile-android/app/build/
+*.apk
+*.aab
+local.properties
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.project
+.classpath
+.settings/
+
+# OS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Environment
+.env
+.env.local
+.env.*.local
+*.pem
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Testing
+coverage/
+.nyc_output/
+
+# Models (large files)
+*.onnx
+*.bin
+models/*.onnx
+!models/.gitkeep
+
+# Temporary
+*.tmp
+*.temp
+.cache/
+
+# Secrets (never commit)
+secrets/
+credentials/
+*.key
