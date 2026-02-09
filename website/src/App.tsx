@@ -2,23 +2,23 @@ export default function App() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-900 to-slate-800 text-white">
       {/* Hero Section */}
-      <header className="container mx-auto px-4 py-16 text-center">
-        <h1 className="text-5xl font-bold mb-4">
+      <header className="container mx-auto px-4 py-10 md:py-16 text-center">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
           ReadForge
         </h1>
-        <p className="text-2xl text-slate-300 mb-8">
+        <p className="text-lg sm:text-xl md:text-2xl text-slate-300 mb-8">
           100% local text-to-speech. Premium voices, zero cloud dependency.
         </p>
-        <div className="flex gap-4 justify-center">
+        <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
           <a
             href="#download"
-            className="bg-blue-600 hover:bg-blue-700 px-8 py-3 rounded-lg font-semibold transition"
+            className="bg-blue-600 hover:bg-blue-700 px-6 sm:px-8 py-3 rounded-lg font-semibold transition text-center"
           >
             Download Now
           </a>
           <a
             href="#features"
-            className="border border-slate-600 hover:border-slate-500 px-8 py-3 rounded-lg font-semibold transition"
+            className="border border-slate-600 hover:border-slate-500 px-6 sm:px-8 py-3 rounded-lg font-semibold transition text-center"
           >
             Learn More
           </a>
@@ -26,9 +26,9 @@ export default function App() {
       </header>
 
       {/* Features Section */}
-      <section id="features" className="container mx-auto px-4 py-16">
-        <h2 className="text-3xl font-bold text-center mb-12">Why ReadForge?</h2>
-        <div className="grid md:grid-cols-3 gap-8">
+      <section id="features" className="container mx-auto px-4 py-10 md:py-16">
+        <h2 className="text-2xl md:text-3xl font-bold text-center mb-8 md:mb-12">Why ReadForge?</h2>
+        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-8">
           <div className="bg-slate-800 p-6 rounded-xl">
             <div className="text-4xl mb-4">🔒</div>
             <h3 className="text-xl font-semibold mb-2">Complete Privacy</h3>
@@ -54,9 +54,9 @@ export default function App() {
       </section>
 
       {/* Platforms Section */}
-      <section className="container mx-auto px-4 py-16">
-        <h2 className="text-3xl font-bold text-center mb-12">Available Everywhere</h2>
-        <div className="grid md:grid-cols-4 gap-6 text-center">
+      <section className="container mx-auto px-4 py-10 md:py-16">
+        <h2 className="text-2xl md:text-3xl font-bold text-center mb-8 md:mb-12">Available Everywhere</h2>
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 md:gap-6 text-center">
           <div className="p-4">
             <div className="text-3xl mb-2">🌐</div>
             <p className="font-semibold">Chrome</p>
@@ -93,18 +93,18 @@ export default function App() {
       </section>
 
       {/* Coming Soon Section */}
-      <section className="container mx-auto px-4 py-16 bg-gradient-to-r from-purple-900/20 to-indigo-900/20 rounded-3xl my-8">
-        <div className="text-center mb-8">
+      <section className="container mx-auto px-3 sm:px-4 py-10 md:py-16 bg-gradient-to-r from-purple-900/20 to-indigo-900/20 rounded-2xl md:rounded-3xl my-4 md:my-8">
+        <div className="text-center mb-6 md:mb-8">
           <span className="bg-purple-500/20 text-purple-300 px-4 py-1 rounded-full text-sm font-medium">
             Coming Soon
           </span>
-          <h2 className="text-3xl font-bold mt-4 mb-2">Interactive Reading Mode</h2>
-          <p className="text-slate-400 max-w-2xl mx-auto">
+          <h2 className="text-2xl md:text-3xl font-bold mt-4 mb-2">Interactive Reading Mode</h2>
+          <p className="text-sm md:text-base text-slate-400 max-w-2xl mx-auto">
             Control your reading with natural voice commands. Powered by PersonaPlex full duplex AI.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-4 md:gap-8 max-w-4xl mx-auto">
           <div className="bg-slate-800/50 p-6 rounded-xl">
             <h3 className="text-lg font-semibold mb-4 text-slate-400">Current Experience</h3>
             <div className="space-y-2 text-sm text-slate-500">
@@ -134,30 +134,30 @@ export default function App() {
           </div>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8 max-w-3xl mx-auto text-center">
-          <div className="p-3">
-            <p className="text-2xl font-bold text-purple-400">&lt;500ms</p>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 mt-6 md:mt-8 max-w-3xl mx-auto text-center">
+          <div className="p-2 md:p-3">
+            <p className="text-lg md:text-2xl font-bold text-purple-400">&lt;500ms</p>
             <p className="text-xs text-slate-400">Response Time</p>
           </div>
-          <div className="p-3">
-            <p className="text-2xl font-bold text-purple-400">Full Duplex</p>
+          <div className="p-2 md:p-3">
+            <p className="text-lg md:text-2xl font-bold text-purple-400">Full Duplex</p>
             <p className="text-xs text-slate-400">Natural Interruption</p>
           </div>
-          <div className="p-3">
-            <p className="text-2xl font-bold text-purple-400">100%</p>
+          <div className="p-2 md:p-3">
+            <p className="text-lg md:text-2xl font-bold text-purple-400">100%</p>
             <p className="text-xs text-slate-400">Local Processing</p>
           </div>
-          <div className="p-3">
-            <p className="text-2xl font-bold text-purple-400">Hands-Free</p>
+          <div className="p-2 md:p-3">
+            <p className="text-lg md:text-2xl font-bold text-purple-400">Hands-Free</p>
             <p className="text-xs text-slate-400">Voice Control</p>
           </div>
         </div>
       </section>
 
       {/* Pricing Section */}
-      <section id="pricing" className="container mx-auto px-4 py-16">
-        <h2 className="text-3xl font-bold text-center mb-12">Simple Pricing</h2>
-        <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+      <section id="pricing" className="container mx-auto px-4 py-10 md:py-16">
+        <h2 className="text-2xl md:text-3xl font-bold text-center mb-8 md:mb-12">Simple Pricing</h2>
+        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-8 max-w-4xl mx-auto">
           <div className="bg-slate-800 p-6 rounded-xl">
             <h3 className="text-xl font-semibold mb-2">Free</h3>
             <p className="text-3xl font-bold mb-4">$0</p>
