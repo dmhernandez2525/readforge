@@ -472,4 +472,4 @@ ReadForge: "Jumping to 'Neural Networks'..." [continues reading]
 
 **Document Version:** 1.0.0
 **Created:** January 25, 2026
-**Next Review:** February 1, 2026
+**Next Review:** April 2026

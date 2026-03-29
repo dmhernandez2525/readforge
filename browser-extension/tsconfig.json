@@ -21,6 +21,6 @@
     },
     "types": ["chrome"]
   },
-  "include": ["src/**/*"],
+  "include": ["src/**/*", ".wxt/wxt.d.ts"],
   "exclude": ["node_modules", "dist", ".output"]
 }

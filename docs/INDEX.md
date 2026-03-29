@@ -55,9 +55,6 @@
 
 ## External Resources
 
-### Research
-- [Competitive Research Report](../_@agent-prompts/readforge/research/COMPILED_RESEARCH.md)
-
 ### Technologies
 - [Kokoro-82M on HuggingFace](https://huggingface.co/hexgrad/Kokoro-82M)
 - [kokoro-js npm package](https://www.npmjs.com/package/kokoro-js)

@@ -20,6 +20,8 @@ Implement the core text-to-speech engine using Kokoro-82M as the primary model w
 
 ## Technical Specification
 
+**Current Status:** The MVP uses the browser's Web Speech API. Kokoro-82M integration is planned as a future upgrade.
+
 ### Model Selection
 
 | Model | Size | Quality | Use Case |
@@ -497,7 +499,6 @@ describe('TTSEngine', () => {
 - kokoro-js: ^1.0.0 (browser)
 - onnxruntime-web: ^1.17.0 (browser)
 - onnxruntime: ^1.17.0 (Python)
-- @anthropic-ai/tokenizer: ^0.1.0 (sentence splitting)
 
 ## Risks & Mitigations
 

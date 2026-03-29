@@ -4,6 +4,7 @@
 **Phase:** 1B
 **Priority:** P0
 **Status:** Draft
+**Implementation Note:** The MVP has been implemented with a simplified architecture. PDF.js, Google Docs integration, and the FloatingPlayer component are planned for future phases. The current implementation uses a popup-based UI with Web Speech API.
 
 ---
 
@@ -68,7 +69,7 @@ browser-extension/
 import { defineConfig } from 'wxt';
 
 export default defineConfig({
-  modules: ['@anthropic-ai/wxt-react'],
+  modules: ['@wxt-dev/module-react'],
   manifest: {
     name: 'ReadForge',
     description: '100% local text-to-speech for web pages, PDFs, and documents',
@@ -117,7 +118,7 @@ export default defineConfig({
 
 ```typescript
 // src/services/text-extractor.ts
-import { Readability } from '@anthropic-ai/readability';
+import { Readability } from '@mozilla/readability';
 
 interface ExtractedContent {
   title: string;
@@ -921,7 +922,7 @@ describe('TextExtractor', () => {
 ## Dependencies
 
 - wxt: ^0.18.0
-- @anthropic-ai/readability: ^0.5.0
+- @mozilla/readability: ^0.5.0
 - pdfjs-dist: ^4.0.0
 - kokoro-js: ^1.0.0
 - react: ^18.2.0

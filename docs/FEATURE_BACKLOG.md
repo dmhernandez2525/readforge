@@ -42,9 +42,9 @@ Features are organized by phase and priority. Each feature includes effort estim
 
 | ID | Feature | Priority | Effort | Dependencies | Status |
 |----|---------|----------|--------|--------------|--------|
-| CHR-001 | WXT project scaffolding | P0 | S | None | Pending |
-| CHR-002 | Content script injection | P0 | S | CHR-001 | Pending |
-| CHR-003 | Readability.js text extraction | P0 | M | CHR-002 | Pending |
+| CHR-001 | WXT project scaffolding | P0 | S | None | Complete |
+| CHR-002 | Content script injection | P0 | S | CHR-001 | Complete |
+| CHR-003 | Readability.js text extraction | P0 | M | CHR-002 | Complete |
 | CHR-004 | PDF.js integration | P0 | L | CHR-001 | Pending |
 | CHR-005 | Google Docs content extraction | P0 | M | CHR-002 | Pending |
 | CHR-006 | Floating player component | P0 | L | CHR-002 | Pending |
@@ -56,10 +56,10 @@ Features are organized by phase and priority. Each feature includes effort estim
 | CHR-012 | kokoro-js WebGPU TTS | P0 | L | CHR-001, TTS-001 | Pending |
 | CHR-013 | WASM fallback | P1 | M | CHR-012 | Pending |
 | CHR-014 | Desktop app relay | P1 | M | CHR-012 | Pending |
-| CHR-015 | Context menu "Read selection" | P1 | S | CHR-002 | Pending |
-| CHR-016 | Extension popup UI | P1 | M | CHR-001 | Pending |
-| CHR-017 | Settings persistence | P0 | S | CHR-001 | Pending |
-| CHR-018 | Keyboard shortcuts | P1 | S | CHR-006 | Pending |
+| CHR-015 | Context menu "Read selection" | P1 | S | CHR-002 | Complete |
+| CHR-016 | Extension popup UI | P1 | M | CHR-001 | Complete |
+| CHR-017 | Settings persistence | P0 | S | CHR-001 | Complete |
+| CHR-018 | Keyboard shortcuts | P1 | S | CHR-006 | Complete |
 
 ### macOS Desktop App
 

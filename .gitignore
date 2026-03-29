@@ -11,6 +11,7 @@ build/
 
 # Browser extension
 browser-extension/.output/
+browser-extension/.wxt/
 browser-extension/dist/
 browser-extension/*.zip
 
@@ -115,3 +116,4 @@ models/*.onnx
 secrets/
 credentials/
 *.key
+.jarvis-resume
